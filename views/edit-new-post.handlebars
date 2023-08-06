@@ -1,0 +1,36 @@
+{{!< layout/main}}
+
+{{#*inline "footer"}}
+  <footer></footer>
+{{/inline}}
+
+<div class="post card">
+  <div class="card-header">
+    {{#if post}}
+      <h2>Edit Post</h2>
+      <form id="edit-post-form" class="card-body">
+        <input type="hidden" name="post-id" value="{{post.id}}" />
+
+        <label class="form-label" for="post-title">Title</label>
+        <input type="text" name="post-title" value="{{post.title}}" class="form-input" />
+
+        <label class="form-label" for="post-body">Content</label>
+        <textarea name="post-body" class="form-input">{{post.body}}</textarea>
+
+        <button type="submit" class="btn">Update</button>
+        <button type="button" id="delete-btn" class="btn">Delete</button>
+      </form>
+    {{else}}
+      <h2>Create New Post</h2>
+      <form id="new-post-form" class="card-body">
+        <label class="form-label" for="post-title">Title</label>
+        <input type="text" name="post-title" class="form-input" />
+
+        <label class="form-label" for="post-body">Content</label>
+        <textarea name="post-body" class="form-input"></textarea>
+
+        <button type="submit" class="btn">Create</button>
+      </form>
+    {{/if}}
+  </div>
+</div>
