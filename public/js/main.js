@@ -105,11 +105,11 @@ const commentFormHandler = async function (event) {
     }
   };
   
-  // Event Listeners
-  document.querySelector('#new-comment-form').addEventListener('submit', commentFormHandler);
-  document.querySelector('#edit-post-form').addEventListener('submit', editFormHandler);
-  document.querySelector('#delete-btn').addEventListener('click', deleteClickHandler);
-  document.querySelector('#login-form').addEventListener('submit', loginFormHandler);
-  document.querySelector('#logout-link').addEventListener('click', logout);
-  document.querySelector('#new-post-form').addEventListener('submit', newFormHandler);
-  document.querySelector('#signup-form').addEventListener('submit', signupFormHandler);
+// Event Listeners
+document.querySelector('#new-comment-form').addEventListener('submit', commentFormHandler);
+document.querySelector('#edit-post-form').addEventListener('submit', editFormHandler);
+document.querySelector('#delete-btn').addEventListener('click', deleteClickHandler);
+document.querySelector('#login-form').addEventListener('submit', loginFormHandler);
+document.querySelector('#logout-link').addEventListener('click', logout);
+document.querySelector('#new-post-form').addEventListener('submit', newFormHandler);
+document.querySelector('#signup-form').addEventListener('submit', signupFormHandler);

@@ -1,13 +1,13 @@
 const withAuth = (req, res, next) => {
-    if (!req.session.userId) {
-      res.redirect("/login");
+    if (!req.session.loggedIn) {
+      res.redirect('/login');
     } else {
       next();
     }
   };
   
-  const format_date = date => {
-    return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+  const format_date = (date) => {
+    return `${new Date(date).toLocaleDateString('en-US')}`;
   };
   
   module.exports = { withAuth, format_date };
